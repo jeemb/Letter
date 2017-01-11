@@ -1,10 +1,11 @@
 $(document).ready(function() {
 $("#blanks form").submit(function() {
-  var person = $("input#person").val();
+  var personInput = $("input#person").val()
+  var capitalized = personInput.toUpperCase();
 
-  $(".person").append(person);
+  $(".person").text(capitalized);
 
-  $("#letter").show();
+  $("#uppercase").show();
 
   event.preventDefault();
 });
